@@ -9,7 +9,7 @@ const product = new ProductManager();
 ProductsRouter.get("/", async (req, res) => {
     res.send (await product.getProducts())
     
-    })
+    });
     
     ProductsRouter.get("/:id", async (req, res) => {
         let id = req.params.id

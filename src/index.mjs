@@ -4,7 +4,7 @@ import CartRouter from "./router/carts.routes.js";
 
 
 const app = express();
-const Port = 4000;
+const Port = 8080;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -19,5 +19,8 @@ console.log (`Server Express Puerto ${Port}`);
 
 });
 
+app.get('/ping', (req, res) => {
+    res.send('pong');
+});
 
 

@@ -31,18 +31,9 @@ class ProductManager {
       product.id = nanoid()
       let productsAll = [...productsOld,product]; 
       await this.writeProducts(productsAll);
-     /* writeProducts = async (product) => { 
-let  products = await fs.readFile(this.path, "utf-8") 
-let  productsParse = JSON.parse(products)   
-console.log(productsParse);
-} */
-      // Assuming you want to modify the products data and write it back
-      // Modify the productsParse here...
-      // Write the modified data back to the file
+     
       return "Producto Agregado";  
-    /* } catch (error) {
-      console.error('Error reading or writing the products file:', error);
-    } */
+  
   };
 
   getProducts = async ()=>{ 
